@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  */
 @Controller
 public class PageController {
-    @GetMapping("/toPage/{page}")
+    @GetMapping("/to/{page}")
     public String toPage(@PathVariable String page){
         return page;
     }

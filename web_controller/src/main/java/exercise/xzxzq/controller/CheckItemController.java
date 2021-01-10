@@ -54,7 +54,7 @@ public class CheckItemController {
         return new Result(true,MessageConstant.QUERY_CHECKITEM_SUCCESS,page);
     }
 
-    @GetMapping("/find/id/{id}")
+    @GetMapping("/find/{id}")
     public Result findById(@PathVariable Integer id){
         CheckItem checkItem = service.findById(id);
         return new Result(true, MessageConstant.QUERY_CHECKITEM_SUCCESS,checkItem);
@@ -68,7 +68,7 @@ public class CheckItemController {
         return new Result(true, MessageConstant.EDIT_CHECKITEM_SUCCESS);
     }
 
-    @PostMapping("/delete/id/{id}")
+    @PostMapping("/delete/{id}")
     public Result deleteById(@PathVariable Integer id){
         service.deleteById(id);
         return new Result(true, MessageConstant.DELETE_CHECKITEM_SUCCESS);

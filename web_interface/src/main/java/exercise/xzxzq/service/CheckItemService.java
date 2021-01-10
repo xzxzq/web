@@ -2,6 +2,7 @@ package exercise.xzxzq.service;
 
 import exercise.xzxzq.entity.PageResult;
 import exercise.xzxzq.entity.QueryPageBean;
+import exercise.xzxzq.exception.BusinessException;
 import exercise.xzxzq.pojo.CheckItem;
 
 import java.util.List;
@@ -23,5 +24,5 @@ public interface CheckItemService {
 
     void update(CheckItem checkItem);
 
-    void deleteById(Integer id);
+    void deleteById(Integer id) throws BusinessException;
 }

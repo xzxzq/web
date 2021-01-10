@@ -313,7 +313,7 @@
                     this.resetForm();
                     this.dialogFormVisible4Edit = true;
                     // 通过id查询
-                    axios.get('/checkitem/find/id/' + id).then(res => {
+                    axios.get('/checkitem/find/' + id).then(res => {
                         if(res.data.flag){
                             this.formData = res.data.data;
                         }else{
@@ -335,7 +335,7 @@
                         type: 'warning'
                     }).then(() => {
                         // 提交删除的请求
-                        axios.post('/checkitem/delete/id/' + id).then(res => {
+                        axios.post('/checkitem/delete/' + id).then(res => {
                             this.$message({
                                 message: res.data.message,
                                 type: res.data.flag?"success":"error"
